@@ -33,12 +33,12 @@ public class Task implements Comparable<Task> {
     @Override
     public boolean equals(Object obj) {
         Task o = (Task) obj;
-        return getProject() == o.getProject() && getDescription() == o.getDescription();
+        return getProject().equals(o.getProject()) && getDescription().equals(o.getDescription());
     }
 
     @Override
     public String toString() {
-        return project + ", " + description + ", " + priority + ", " + status;
+        return assignee + ", " + project + ", " + description + ", " + priority + ", " + status;
     }
 
     public String getAssignee() {
