@@ -1,4 +1,4 @@
-package com.systemerr.javacourse.streamingstudents;
+package com.systemerr.javacourse.streamingstudentschallenge;
 
 import java.time.LocalDate;
 

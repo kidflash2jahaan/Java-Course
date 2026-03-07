@@ -1,6 +1,7 @@
-package com.systemerr.javacourse.streamingstudents;
+package com.systemerr.javacourse.streamingstudentschallenge;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -50,7 +51,7 @@ public class Student {
     }
 
     public double getPercentComplete(String courseCode) {
-        return engagementMap.get(courseCode).getPercentComplete()
+        return engagementMap.get(courseCode).getPercentComplete();
     }
 
     public int getYearsSinceEnrolled() {
@@ -62,7 +63,7 @@ public class Student {
     }
 
     public static Student getRandomStudent(Course... courses) {
-        Student student = new Student(new Random().nextLong(000000001, 999999999), "en", new Random().nextInt(2000, LocalDate.now().getYear() + 1), new Random().nextInt(13, 80), new Random().nextBoolean() ? "male" : "female", new Random().nextBoolean(), Map.of());
+        Student student = new Student(new Random().nextLong(000000001, 999999999), "en", new Random().nextInt(2000, LocalDate.now().getYear() + 1), new Random().nextInt(13, 80), new Random().nextBoolean() ? "male" : "female", new Random().nextBoolean(), new HashMap<>());
         for (Course course : courses) {
             student.addCourse(course, LocalDate.of(new Random().nextInt(student.getYearEnrolled(), LocalDate.now().getYear() + 1), 1, 1));
         }
